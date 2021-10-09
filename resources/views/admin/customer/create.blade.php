@@ -117,14 +117,14 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label class="control-label">TRN Number</label>
-                                                <input type="text" name="TRNNumber" class="form-control" placeholder="Enter TRN Number" autocomplete="off">
+                                                <label class="control-label">GST Number</label>
+                                                <input type="text" name="TRNNumber" class="form-control" placeholder="Enter GST Number" autocomplete="off">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label class="control-label">Upload File</label>
-                                                <input type="file" name="fileUpload" class="form-control" placeholder="Enter TRN Number">
+                                                <label class="control-label">GST Document File</label>
+                                                <input type="file" name="fileUpload" class="form-control">
                                             </div>
                                         </div>
                                     </div>

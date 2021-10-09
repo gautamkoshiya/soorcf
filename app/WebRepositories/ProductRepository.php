@@ -29,6 +29,7 @@ class ProductRepository implements IProductRepositoryInterface
         $company_id = session('company_id');
         $data =[
             'Name' =>$productRequest->Name,
+            'Description' =>$productRequest->Description,
             'user_id' => $user_id ?? 0,
             'company_id' => $company_id ?? 0,
         ];
@@ -42,6 +43,7 @@ class ProductRepository implements IProductRepositoryInterface
         $user_id = session('user_id');
         $data->update([
             'Name' => $request->Name,
+            'Description' => $request->Description,
             'user_id' => $user_id,
         ]);
         return redirect()->route('products.index')->with('update','Record Updated Successfully');

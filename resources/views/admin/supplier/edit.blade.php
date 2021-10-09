@@ -113,14 +113,14 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label class="control-label">TRN Number</label>
-                                                <input type="text" name="TRNNumber" value="{{ $supplier->TRNNumber }}" class="form-control" placeholder="Enter TRN Number">
+                                                <label class="control-label">GST Number</label>
+                                                <input type="text" name="TRNNumber" value="{{ $supplier->TRNNumber }}" class="form-control" placeholder="Enter GST Number">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label class="control-label">Upload File</label>
-                                                <input type="file" name="fileUpload"  class="form-control" placeholder="Enter TRN Number">
+                                                <input type="file" name="fileUpload"  class="form-control">
                                             </div>
                                         </div>
                                     </div>

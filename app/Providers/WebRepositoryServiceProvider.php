@@ -28,6 +28,7 @@ use App\WebRepositories\ExpensesRepository;
 use App\WebRepositories\FileManagerRepository;
 use App\WebRepositories\FinancerRepository;
 use App\WebRepositories\GenderRepository;
+use App\WebRepositories\GstRepository;
 use App\WebRepositories\Interfaces\IBankRepositoryInterface;
 use App\WebRepositories\Interfaces\IBankToBankRepositoryInterface;
 use App\WebRepositories\Interfaces\ICityRepositoryInterface;
@@ -53,6 +54,7 @@ use App\WebRepositories\Interfaces\IExpensesRepositoryInterface;
 use App\WebRepositories\Interfaces\IFileManagerRepositoryInterface;
 use App\WebRepositories\Interfaces\IFinancerRepositoryInterface;
 use App\WebRepositories\Interfaces\IGenderRepositoryInterface;
+use App\WebRepositories\Interfaces\IGstRepositoryInterface;
 use App\WebRepositories\Interfaces\IInvestorRepositoryInterface;
 use App\WebRepositories\Interfaces\IInvestorTransactionRepositoryInterface;
 use App\WebRepositories\Interfaces\IInwardLoanRepositoryInterface;
@@ -211,6 +213,7 @@ class WebRepositoryServiceProvider extends ServiceProvider
         $this->app->bind(INationalityRepositoryInterface::class,NationalityRepository::class);
         $this->app->bind(IGenderRepositoryInterface::class,GenderRepository::class);
         $this->app->bind(IEmployeeTransactionRepositoryInterface::class,EmployeeTransactionRepository::class);
+        $this->app->bind(IGstRepositoryInterface::class,GstRepository::class);
     }
 
     public function boot()

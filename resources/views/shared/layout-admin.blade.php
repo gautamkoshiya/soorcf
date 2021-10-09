@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="author" content="ALHAMOOD GENERAL TRANSPORT">
+    <meta name="author" content="SOOR COLOR FRESH">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('admin_assets/assets/images/favicon.png') }}">
     <title>@yield('title')</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -186,7 +186,7 @@ input:checked + .slider:before {
 <div class="preloader">
     <div class="loader">
         <div class="loader__figure"></div>
-        <p class="loader__label">IT Molen</p>
+        <p class="loader__label">SOORCF</p>
     </div>
 </div>
 <div id="main-wrapper">
@@ -194,12 +194,9 @@ input:checked + .slider:before {
         <nav class="navbar top-navbar navbar-expand-md navbar-dark">
             <div class="navbar-header">
                 <a class="navbar-brand" href="/">
-                    <b>
-                        <img src="{{ asset('admin_assets/assets/images/logo-icon.png') }}" alt="homepage" class="dark-logo" />
-                        <img src="{{ asset('admin_assets/assets/images/logo-icon.png') }}" alt="homepage" class="light-logo" />
-                    </b><span>
-                         <img src="{{ asset('admin_assets/assets/images/logo-text.png') }}" alt="homepage" class="dark-logo" />
-                         <img src="{{ asset('admin_assets/assets/images/logo-text.png') }}" class="light-logo" alt="homepage" /></span> </a>
+                    <span>
+                         <img src="{{ asset('admin_assets/assets/images/soor.jpg') }}" alt="homepage" class="dark-logo" />
+                         <img src="{{ asset('admin_assets/assets/images/soor.jpg') }}" class="light-logo" alt="homepage" height="50px;" /></span> </a>
             </div>
             <div class="navbar-collapse">
                 <ul class="navbar-nav mr-auto">

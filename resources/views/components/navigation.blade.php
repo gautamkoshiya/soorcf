@@ -36,6 +36,7 @@
 {{--                    <li class="border-bottom"><a href="{{ route('payment_types.index') }}">Payment Type list</a></li>--}}
                     @if(Session::get('role_name')=='superadmin')
                         <li class="border-bottom"><a href="{{ route('units.index') }}">Units list</a></li>
+                        <li class="border-bottom"><a href="{{ route('gsts.index') }}">GST</a></li>
                         <li class="border-bottom"><a href="{{ route('task_frequencies.index') }}">Task Frequency</a></li>
                         <li class="border-bottom"><a href="{{ route('products.index') }}">Products list</a></li>
                         <li class="border-bottom"><a href="{{ route('companies.index') }}">Companies list</a></li>

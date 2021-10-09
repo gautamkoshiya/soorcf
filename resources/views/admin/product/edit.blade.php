@@ -33,12 +33,22 @@
                                     <h3 class="card-title">Modification</h3>
                                     <hr>
                                     <div class="row p-t-20">
-                                        <div class="col-md-12">
+                                        <div class="col-md-6">
                                             <div class="form-group">
-                                                <label class="control-label">Product Name</label>
-                                                <input type="text" id="Name" name="Name" value="{{ $product->Name }}" class="form-control" placeholder="Product Name">
+                                                <label class="control-label">Product Name :- <span class="required">*</span></label>
+                                                <input type="text" id="Name" name="Name" value="{{ $product->Name }}" class="form-control" placeholder="Product Name" autocomplete="off">
                                                 @if ($errors->has('Name'))
                                                     <span class="text-danger">{{ $errors->first('Name') }}</span>
+                                                @endif
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="control-label">HSN Code :- <span class="required">*</span></label>
+                                                <input type="text" id="Description" name="Description" value="{{ $product->Description }}" class="form-control" placeholder="Product Name" autocomplete="off" maxlength="8" minlength="6">
+                                                @if ($errors->has('Description'))
+                                                    <span class="text-danger">{{ $errors->first('Description') }}</span>
                                                 @endif
                                             </div>
                                         </div>

@@ -9,6 +9,7 @@ use App\Http\Resources\Purchase\PurchaseResource;
 use App\Models\AccountTransaction;
 use App\Models\CashTransaction;
 use App\Models\Customer;
+use App\Models\gst;
 use App\Models\lpo_detail;
 use App\Models\Product;
 use App\Models\Purchase;
@@ -172,8 +173,9 @@ class PurchaseRepository implements IPurchaseRepositoryInterface
         $PadNumber = $this->PadNumber();
         $suppliers = Supplier::where('company_type_id',2)->where('company_id',session('company_id'))->get();
         $products = Product::select('id','Name')->get();
+        $gst = gst::select('id','Name','percentage','IsCombined')->get();
         $purchaseRecords = Purchase::with(['purchase_details_without_trash','supplier'=>function($q){$q->select('id','Name');}])->where('company_id',session('company_id'))->orderBy('id', 'desc')->skip(0)->take(3)->get();
-        return view('admin.purchase.create',compact('suppliers','purchaseNo','products','PadNumber','purchaseRecords'));
+        return view('admin.purchase.create',compact('suppliers','purchaseNo','products','PadNumber','purchaseRecords','gst'));
     }
 
     public function store(PurchaseRequest $purchaseRequest)
@@ -1064,8 +1066,9 @@ class PurchaseRepository implements IPurchaseRepositoryInterface
         $suppliers = Supplier::where('company_type_id',2)->get();
         $products = Product::all();
         $units = Unit::all();
+        $gst = gst::select('id','Name','percentage','IsCombined')->get();
         $purchase_details = PurchaseDetail::withTrashed()->with('purchase.supplier','user','product','unit')->where('purchase_id', $Id)->get();
-        return view('admin.purchase.edit',compact('purchase_details','suppliers','products','update_notes','units'));
+        return view('admin.purchase.edit',compact('purchase_details','suppliers','products','update_notes','units','gst'));
     }
 
     public function delete($Id)

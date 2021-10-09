@@ -114,14 +114,14 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label class="control-label">TRN Number</label>
+                                                <label class="control-label">GST Number :- <span class="required">*</span></label>
                                                 <input type="text" name="TRNNumber" value="{{ $customer->TRNNumber }}" class="form-control" placeholder="Enter TRN Number">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label class="control-label">Upload File</label>
-                                                <input type="file" name="fileUpload"  class="form-control" placeholder="Enter TRN Number">
+                                                <label class="control-label">GST Document File</label>
+                                                <input type="file" name="fileUpload"  class="form-control">
                                             </div>
                                         </div>
                                     </div>

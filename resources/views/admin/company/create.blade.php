@@ -66,16 +66,22 @@
                                     </div>
 
                                     <div class="row p-t-20">
-                                        <div class="col-md-6">
+                                        <div class="col-md-4">
                                             <div class="form-group">
-                                                <label class="control-label">Phone</label>
-                                                <input type="text" id="Phone" name="Phone" class="form-control" placeholder="Enter Phone Number">
+                                                <label class="control-label">Phone :- <span class="required">*</span></label>
+                                                <input type="text" id="Phone" name="Phone" class="form-control" placeholder="Enter Phone Number" required>
                                             </div>
                                         </div>
-                                        <div class="col-md-6">
+                                        <div class="col-md-4">
                                             <div class="form-group">
                                                 <label class="control-label">Mobile Number</label>
                                                 <input type="text" id="Mobile" name="Mobile" class="form-control" placeholder="Mobile Number">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label class="control-label">GST Number :- <span class="required">*</span></label>
+                                                <input type="text" id="GST" name="GST" class="form-control" placeholder="GST Number" autocomplete="off" max="15" minlength="15" required>
                                             </div>
                                         </div>
                                     </div>

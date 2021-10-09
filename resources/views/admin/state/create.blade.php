@@ -33,19 +33,29 @@
                                     <h3 class="card-title">Registration</h3>
                                     <hr>
                                     <div class="row p-t-20">
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label class="control-label">state Name</label>
-                                                    <input type="text" id="Name" name="Name" class="form-control" placeholder="State Name" required>
-                                                    @if ($errors->has('Name'))
-                                                        <span class="text-danger">{{ $errors->first('Name') }}</span>
-                                                    @endif
-                                                </div>
-                                            </div>
-
-                                        <div class="col-md-6">
+                                        <div class="col-md-4">
                                             <div class="form-group">
-                                                <label>Country Selection</label>
+                                                <label class="control-label">state Name :- <span class="required">*</span></label>
+                                                <input type="text" id="Name" name="Name" class="form-control" placeholder="State Name" required>
+                                                @if ($errors->has('Name'))
+                                                    <span class="text-danger">{{ $errors->first('Name') }}</span>
+                                                @endif
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label class="control-label">state Code :- <span class="required">*</span></label>
+                                                <input type="text" id="state_code" name="state_code" class="form-control" placeholder="State Code" required>
+                                                @if ($errors->has('state_code'))
+                                                    <span class="text-danger">{{ $errors->first('state_code') }}</span>
+                                                @endif
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label>Country Selection :- <span class="required">*</span></label>
                                                 <select class="form-control custom-select country_id" name="country_id" id="country_id" required>
                                                     <option value="">--Select country--</option>
                                                     @foreach($countries as $country)

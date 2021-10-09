@@ -77,6 +77,7 @@ class CompanyRepository implements ICompanyRepositoryInterface
             'postCode' =>$companyRequest->postCode,
             'user_id' =>$user_id ?? 0,
             'Description' =>$companyRequest->Description,
+            'GST' =>$companyRequest->GST,
         ];
         $company = Company::create($company);
         if ($company) {
@@ -119,6 +120,7 @@ class CompanyRepository implements ICompanyRepositoryInterface
             'region_id' =>$request->region_id ?? 0,
             'postCode' => $request->postCode,
             'Description' => $request->Description,
+            'GST' => $request->GST,
             'user_id' => $user_id ?? 0,
         ]);
 

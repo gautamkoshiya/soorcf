@@ -122,7 +122,7 @@
                                                 <th style="width: 150px">QUANTITY <span class="required">*</span></th>
                                                 <th style="width: 150px">PRICE <span class="required">*</span></th>
                                                 <th style="width: 150px">TOTAL</th>
-                                                <th style="width: 130px">VAT <span class="required">*</span></th>
+                                                <th style="width: 130px">GST <span class="required">*</span></th>
                                                 <th style="width: 150px">SUBTOTAL</th>
                                                 {{--                                                <th>Action</th>--}}
                                             </tr>
@@ -163,8 +163,10 @@
                                                 <td>
                                                     <div class="form-group">
                                                         <select name="VAT" class="form-control VAT">
-                                                            <option value="0">0.00</option>
-                                                            <option value="5">5.00</option>
+                                                            <option value="">select</option>
+                                                            @foreach($gst as $single)
+                                                                <option value="{{ $single->id }}">{{ $single->Name }}</option>
+                                                            @endforeach
                                                         </select>
                                                     </div>
                                                 </td>

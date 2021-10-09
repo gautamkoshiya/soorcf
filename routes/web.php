@@ -101,6 +101,7 @@ route::resource('regions','RegionController');
 route::get('locationDetails/{id}','RegionController@locationDetails');
 
 route::resource('units','UnitController');
+route::resource('gsts','GstController');
 route::resource('report_file_types','ReportFileTypeController');
 route::resource('products','ProductController');
 route::get('productsDetails/{Id}','ProductController@productDetails');

@@ -1,5 +1,5 @@
 @extends('shared.layout-admin')
-@section('title', 'Al Hamood')
+@section('title', 'SOORCF')
 @section('content')
     {{-- data coming from admin controller --}}
         <div class="page-wrapper">
