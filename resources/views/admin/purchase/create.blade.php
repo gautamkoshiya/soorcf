@@ -165,7 +165,7 @@
                                                         <select name="VAT" class="form-control VAT">
                                                             <option value="">select</option>
                                                             @foreach($gst as $single)
-                                                                <option value="{{ $single->id }}">{{ $single->Name }}</option>
+                                                                <option value="{{ $single->percentage }}">{{ $single->Name.'|'.$single->percentage }}</option>
                                                             @endforeach
                                                         </select>
                                                     </div>

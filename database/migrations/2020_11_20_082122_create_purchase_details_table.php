@@ -6,11 +6,6 @@ use Illuminate\Support\Facades\Schema;
 
 class CreatePurchaseDetailsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         Schema::create('purchase_details', function (Blueprint $table) {
@@ -26,8 +21,12 @@ class CreatePurchaseDetailsTable extends Migration
             $table->decimal('Quantity',10,2)->default('0');
             $table->decimal('Price',10,2)->default('0');
             $table->decimal('rowTotal',10,2)->default('0');
-            $table->decimal('VAT',10,2)->default('0');
-            $table->decimal('rowVatAmount',10,2)->default('0');
+            $table->decimal('Cgst',10,2)->default('0');
+            $table->decimal('rowCgstAmount',10,2)->default('0');
+            $table->decimal('Sgst',10,2)->default('0');
+            $table->decimal('rowSgstAmount',10,2)->default('0');
+            $table->decimal('Igst',10,2)->default('0');
+            $table->decimal('rowIgstAmount',10,2)->default('0');
             $table->decimal('rowSubTotal',10,2)->default('0');
             $table->boolean('isActive')->default(true);
             $table->softDeletes();
@@ -35,11 +34,6 @@ class CreatePurchaseDetailsTable extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('purchase_details');

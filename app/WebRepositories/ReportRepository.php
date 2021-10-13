@@ -3182,7 +3182,7 @@ class ReportRepository implements IReportRepositoryInterface
                     <th align="center" width="50">Qty</th>
                     <th align="center" width="30">Rate</th>
                     <th align="center" width="55">Total</th>
-                    <th align="center" width="45">VAT</th>
+                    <th align="center" width="45">GST</th>
                     <th align="center" width="50">SubTotal</th>
                     <th align="center" width="55">Paid</th>
                     <th align="center" width="55">Balance</th>
